@@ -1,0 +1,20 @@
+{
+  "name": "dashtar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "frontend": "cd dashtar-admin && npm install -f",
+    "backend": "cd dashtar-backend && npm install -f",
+    "devfrontend": "cd dashtar-admin && export NODE_OPTIONS=--openssl-legacy-provider && npm start",
+    "devbackend": "cd dashtar-backend && npm run dev",
+    "install": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "dev": "concurrently \"npm run devfrontend\" \"npm run devbackend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
